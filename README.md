@@ -1,2 +1,3 @@
-# Guess-What-A-simple-guessing-game-
-A simple interactive guessing game using JavaScript, HTML and CSS
+# Guess-What
+A simple interactive guessing game using JavaScript, HTML and CSS.
+It can be very addictive play at your own risk.
