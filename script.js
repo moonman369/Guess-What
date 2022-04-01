@@ -13,7 +13,7 @@ console.log(document.querySelector('.guess').value)*/
 //State variables
 let secretNum = Math.trunc(Math.random() * 20) + 1
 
-let gleft = 10
+let gleft = 7
 
 let highScore = 0
 
@@ -72,7 +72,7 @@ const handleClickCheck = function () {
 const handleReset = function () {
   secretNum = Math.trunc(Math.random() * 20) + 1
   score = 0
-  gleft = 10
+  gleft = 7
   document.querySelector('.number').textContent = '?'
   document.getElementById('guessField').disabled = false
   document.querySelector('.score').textContent = score
