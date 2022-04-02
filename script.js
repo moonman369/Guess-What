@@ -1,12 +1,10 @@
 'use strict'
 
 /*console.log(document.querySelector('.message').textContent)
-
 //setting the text content
 document.querySelector('.message').textContent = 'Correct Number'
 document.querySelector('.number').textContent = '2'
 document.querySelector('.score').textContent = '69'
-
 document.querySelector('.guess').value = 69
 console.log(document.querySelector('.guess').value)*/
 
@@ -24,18 +22,23 @@ let score = 0
 //function to calculate score from the number of guesses left
 const calcScore = n => n * 10
 
-//To handle the click of `check`
+//function to display suitable message
+const displayMessage = message =>
+  (document.querySelector('.message').textContent = message)
+
+//To handle the click event on `check`
 const handleClickCheck = function () {
   guess = Number(document.querySelector('.guess').value)
   console.log(guess, typeof guess)
+
   if (gleft > 1) {
     //No input
     if (!guess) {
-      document.querySelector('.message').textContent = '⛔ No Number Entered.'
+      displayMessage('⛔ No Number Entered.')
 
       //Correct number
     } else if (guess === secretNum) {
-      document.querySelector('.message').textContent = '🎉 Correct Number!!!'
+      displayMessage('Correct Number!!!')
       document.querySelector('body').style.backgroundColor = '#3DC22C'
       document.querySelector('.number').style.width = '30rem'
       document.querySelector('.number').textContent = secretNum
@@ -47,10 +50,8 @@ const handleClickCheck = function () {
 
       //Number not equal
     } else if (guess !== secretNum) {
-      document.querySelector('.message').textContent =
-        guess < secretNum
-          ? '📉 Too low! Enter again.'
-          : '📈 Too high! Enter again.'
+      if (guess < secretNum) displayMessage('📉 Too low! Enter again.')
+      else displayMessage('📈 Too high! Enter again.')
       gleft--
       score = calcScore(gleft)
       document.querySelector('.guess-left').textContent = gleft
@@ -63,12 +64,13 @@ const handleClickCheck = function () {
     score = calcScore(gleft)
     document.querySelector('.score').textContent = score
     document.querySelector('.guess-left').textContent = gleft
-    document.querySelector('.message').textContent = '👊🔴 GAME OVER!!! 🔴👊'
+    displayMessage('👊🔴 GAME OVER!!! 🔴👊')
     document.querySelector('body').style.backgroundColor = '#ff3131'
     document.getElementById('guessField').disabled = true
   }
 }
 
+//Handling click event on `Again`
 const handleReset = function () {
   secretNum = Math.trunc(Math.random() * 20) + 1
   score = 0
@@ -79,11 +81,20 @@ const handleReset = function () {
   document.querySelector('.guess-left').textContent = gleft
   document.querySelector('body').style.backgroundColor = '#222'
   document.querySelector('.number').style.width = '15rem'
-  document.querySelector('.message').textContent = 'Start guessing...'
+  displayMessage('Start guessing...')
   //document.getElementById('guessField').reset()
   document.querySelector('.guess').value = ''
 }
 
+//Event Listener for click event on `Check`
 document.querySelector('.btn.check').addEventListener('click', handleClickCheck)
 
+//Event Listener for keyup event on `Check`
+document.getElementById('guessField').addEventListener('keyup', function (e) {
+  if (e.key === 'Enter') {
+    handleClickCheck()
+  }
+})
+
+//Event Listener for click event on `Again`
 document.querySelector('.btn.again').addEventListener('click', handleReset)
