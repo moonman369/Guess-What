@@ -24,7 +24,7 @@ const calcScore = n => n * 10
 
 //function to display suitable message
 const displayMessage = message =>
-  (document.querySelector('.message').textContent = message)
+  document.querySelector('.message').textContent = message
 
 //To handle the click event on `check`
 const handleClickCheck = function () {
@@ -50,14 +50,14 @@ const handleClickCheck = function () {
 
       //Number not equal
     } else if (guess !== secretNum) {
-      if (guess < secretNum) displayMessage('📉 Too low! Enter again.')
-      else displayMessage('📈 Too high! Enter again.')
+      if (guess < secretNum) displayMessage('📉 Too low! Enter again.') //Number too low
+      else displayMessage('📈 Too high! Enter again.')//Number too high
       gleft--
       score = calcScore(gleft)
       document.querySelector('.guess-left').textContent = gleft
       document.querySelector('.score').textContent = score
 
-      //Number too low
+      //Game Over
     }
   } else {
     gleft = 0
@@ -89,8 +89,8 @@ const handleReset = function () {
 //Event Listener for click event on `Check`
 document.querySelector('.btn.check').addEventListener('click', handleClickCheck)
 
-//Event Listener for keyup event on `Check`
-document.getElementById('guessField').addEventListener('keyup', function (e) {
+//Event Listener for global `keyup` event
+document.addEventListener('keyup', function (e) {
   if (e.key === 'Enter') {
     handleClickCheck()
   }
