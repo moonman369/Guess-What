@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
 
 * {
   margin: 0;
@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  font-family: 'Press Start 2P', sans-serif;
+  font-family: "Press Start 2P", sans-serif;
   color: #eee;
   background-color: #222;
   /* background-color: #60b347; */
@@ -78,6 +78,12 @@ h1 {
 
 .again {
   position: absolute;
+  top: 10rem;
+  left: 2rem;
+}
+
+.instruc {
+  position: absolute;
   top: 2rem;
   left: 2rem;
 }
@@ -120,4 +126,64 @@ h1 {
 
 .label-guess-left {
   margin-bottom: 2rem;
+}
+
+.hidden {
+  display: none;
+}
+
+/*MODAL CLASSES*/
+.show-modal {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.75rem 3.5rem;
+  margin: 10em 2rem;
+  border: none;
+  background-color: rgb(56, 53, 53);
+  color: #fff;
+  border-radius: 10rem;
+  cursor: pointer;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  font-size: medium;
+  align-items: flex-start;
+  font-family: "Courier New", Courier, monospace;
+  color: rgb(233, 227, 227);
+  background-color: rgb(56, 53, 53);
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(7px);
+  z-index: 5;
+}
+
+.link {
+  color: #00ffff;
 }

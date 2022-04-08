@@ -12,11 +12,20 @@
       <h1>Guess What</h1>
       <p class="between">(Between 1 and 20)</p>
       <button class="btn again">Play Again!</button>
+      <button class="btn instruc">Instructions</button>
       <div class="number">?</div>
     </header>
     <main>
       <section class="left">
-        <input type="number" min="1" max="20" placeholder="1-20" oninput="(!validity.rangeOverflow||(value=20)) && (!validity.rangeUnderflow||(value=1)) &&(!validity.stepMismatch||(value=parseInt(this.value)));" class="guess" id="guessField" />
+        <input
+          type="number"
+          min="1"
+          max="20"
+          placeholder="1-20"
+          oninput="(!validity.rangeOverflow||(value=20)) && (!validity.rangeUnderflow||(value=1)) &&(!validity.stepMismatch||(value=parseInt(this.value)));"
+          class="guess"
+          id="guessField"
+        />
         <button class="btn check">Check!</button>
       </section>
       <section class="right">
@@ -30,6 +39,30 @@
         </p>
       </section>
     </main>
+    <div class="modal hidden">
+      <button class="close-modal">&times;</button>
+      <br>
+        <h2>📝 INSTRUCTIONS</h1>
+        <br>
+        <h3>Welcome to Guess What. This is a single player guessing game.</h3>
+        <br>
+        
+        <br>
+        <h3>CONTROLS:</h3>
+        <br>🎲 DIALOG BOX -> This is where you insert the number that you have guessed.
+        <br>📥 CHECK -> Press to check if the entered number is same as the secret number.
+        <br>🔄 PLAY AGAIN! -> Reset the scores and start a new game.
+        <br><br><br>
+        <h3>HOW TO PLAY:</h3>
+        <br>1. You get 7 guesses to find the secret number hidden behind the question mark at the middle. <br>2. With each guess, you enter an integer number between 1 and 20 (both inclusive). <br>3. Click on the `CHECK` button or press enter to check if your guess is correct. <br>4. You start with 70 points and they decreses with every consequtive guess to consume. <br>5. You lose once your score reaches zero. 
+        <br>
+        <br />Enjoy my other game: 
+        <a class="link" href="https://moonman369.github.io/Dicey/"
+          >Dicey</a
+        >
+      </p>
+    </div>
+    <div class="overlay hidden"></div>
     <script src="script.js"></script>
   </body>
 </html>
