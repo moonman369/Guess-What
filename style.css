@@ -13,8 +13,8 @@ html {
 
 body {
   font-family: "Press Start 2P", sans-serif;
-  color: #eee;
-  background-color: #222;
+  color: rgb(241, 236, 236);
+  background-color: rgb(26, 25, 25);
   /* background-color: #60b347; */
 }
 
@@ -42,7 +42,12 @@ main {
 
 .right {
   width: 52rem;
-  font-size: 2rem;
+  font-size: 2.25rem;
+}
+
+.message {
+  font-size: 2.5rem;
+  top: 23rem;
 }
 
 /* ELEMENTS STYLE */
@@ -105,7 +110,7 @@ h1 {
   border: none;
   background-color: #eee;
   color: #222;
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-family: inherit;
   padding: 2rem 1.3rem;
   cursor: pointer;
@@ -124,8 +129,20 @@ h1 {
   margin-bottom: 2rem;
 }
 
+.score {
+  color: rgb(98, 96, 226);
+}
+
+.highscore {
+  color: rgb(142, 36, 168);
+}
+
 .label-guess-left {
   margin-bottom: 2rem;
+}
+
+.guess-left {
+  color: #e0d530;
 }
 
 .hidden {
