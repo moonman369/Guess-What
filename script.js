@@ -42,10 +42,10 @@ const handleClickCheck = function () {
 
       //Correct number
     } else if (guess === secretNum) {
-      displayMessage("Correct Number!!!");
-      document.querySelector("body").style.backgroundColor = "#3DC22C";
-      document.querySelector(".number").style.width = "30rem";
+      displayMessage("✅ Correct Number!!!");
+      document.querySelector("body").classList.add("winner");
       document.querySelector(".number").textContent = secretNum;
+      document.querySelector(".number").style.width = "25rem";
       score = calcScore(gleft);
       document.querySelector(".score").textContent = score;
       highScore = Math.max(highScore, score);
@@ -69,8 +69,10 @@ const handleClickCheck = function () {
     score = calcScore(gleft);
     document.querySelector(".score").textContent = score;
     document.querySelector(".guess-left").textContent = gleft;
+    document.querySelector(".number").textContent = secretNum;
+    document.querySelector(".number").style.width = "25rem";
     displayMessage("👊🔴 GAME OVER!!! 🔴👊");
-    document.querySelector("body").style.backgroundColor = "#ff3131";
+    document.querySelector("body").classList.add("loser");
     document.getElementById("guessField").disabled = true;
   }
 };
@@ -84,7 +86,10 @@ const handleReset = function () {
   document.getElementById("guessField").disabled = false;
   document.querySelector(".score").textContent = score;
   document.querySelector(".guess-left").textContent = gleft;
-  document.querySelector("body").style.backgroundColor = "#222";
+  document.querySelector("body").classList.contains("winner")
+    ? document.querySelector("body").classList.remove("winner")
+    : document.querySelector("body").classList.remove("loser");
+
   document.querySelector(".number").style.width = "15rem";
   displayMessage("Start guessing...");
   //document.getElementById('guessField').reset()

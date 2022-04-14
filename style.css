@@ -149,6 +149,14 @@ h1 {
   display: none;
 }
 
+.winner {
+  background-color: #3dc22c;
+}
+
+.loser {
+  background-color: #ff3131;
+}
+
 /*MODAL CLASSES*/
 .show-modal {
   font-size: 2rem;
