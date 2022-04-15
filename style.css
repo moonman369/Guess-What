@@ -118,6 +118,7 @@ h1 {
   font-size: 1.75rem;
   font-family: inherit;
   padding: 2rem 1.3rem;
+  transition: all 0.45s;
   cursor: pointer;
 }
 
