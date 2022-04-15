@@ -41,6 +41,7 @@ main {
 }
 
 .right {
+  padding-left: 7.5rem;
   width: 52rem;
   font-size: 2.25rem;
 }
@@ -52,11 +53,12 @@ main {
 
 /* ELEMENTS STYLE */
 h1 {
-  font-size: 4rem;
+  font-size: 4.5rem;
+  text-shadow: 0 5px 15px rgba(176, 250, 255, 0.747);
   text-align: center;
   position: absolute;
   width: 100%;
-  top: 52%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -116,8 +118,32 @@ h1 {
   cursor: pointer;
 }
 
-.btn:hover {
-  background-color: #ccc;
+.btn.check {
+  color: rgb(20, 20, 20);
+  background-color: rgb(132, 133, 241);
+  box-shadow: 0 5px 15px rgba(106, 152, 238, 0.45);
+}
+
+.btn.check:hover {
+  box-shadow: 0 5px 15px rgba(132, 134, 241, 0.932);
+}
+
+.btn.again {
+  background-color: rgb(236, 141, 243);
+  box-shadow: 0 5px 15px rgba(233, 112, 241, 0.459);
+}
+
+.btn.again:hover {
+  box-shadow: 0 5px 15px rgba(233, 112, 241, 0.938);
+}
+
+.btn.instruc {
+  background-color: rgb(255, 248, 119);
+  box-shadow: 0 5px 15px rgba(255, 248, 119, 0.521);
+}
+
+.btn.instruc:hover {
+  box-shadow: 0 5px 15px rgba(255, 248, 119, 0.863);
 }
 
 .message {
@@ -142,7 +168,7 @@ h1 {
 }
 
 .guess-left {
-  color: #e0d530;
+  color: #fced1d;
 }
 
 .hidden {
@@ -150,11 +176,13 @@ h1 {
 }
 
 .winner {
-  background-color: #3dc22c;
+  background-color: #6cf15a;
+  color: rgb(36, 36, 36);
 }
 
 .loser {
   background-color: #ff3131;
+  color: rgb(36, 36, 36);
 }
 
 /*MODAL CLASSES*/
