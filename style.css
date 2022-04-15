@@ -22,7 +22,7 @@ body {
 header {
   position: relative;
   height: 35vh;
-  border-bottom: 7px solid rgb(238, 238, 238);
+  border-bottom: 7px solid rgb(230, 230, 230);
 }
 
 main {
@@ -54,7 +54,8 @@ main {
 /* ELEMENTS STYLE */
 h1 {
   font-size: 4.5rem;
-  text-shadow: 0 5px 15px rgba(176, 250, 255, 0.747);
+  text-shadow: 0 5px 15px rgba(148, 248, 156, 0.753);
+  color: rgb(232, 241, 241);
   text-align: center;
   position: absolute;
   width: 100%;
@@ -76,11 +77,13 @@ h1 {
   transform: translate(-50%, 50%);
 }
 
-.between {
+.author {
   font-size: 1.4rem;
   position: absolute;
+  color: rgb(218, 234, 248);
   top: 2rem;
   right: 2rem;
+  text-shadow: 0 5px 15px rgba(152, 191, 250, 0.801);
 }
 
 .again {
@@ -120,12 +123,12 @@ h1 {
 
 .btn.check {
   color: rgb(20, 20, 20);
-  background-color: rgb(132, 133, 241);
-  box-shadow: 0 5px 15px rgba(106, 152, 238, 0.45);
+  background-color: rgb(151, 153, 231);
+  box-shadow: 0 5px 15px rgba(146, 148, 236, 0.45);
 }
 
 .btn.check:hover {
-  box-shadow: 0 5px 15px rgba(132, 134, 241, 0.932);
+  box-shadow: 0 5px 15px rgba(127, 145, 224, 0.94);
 }
 
 .btn.again {
@@ -134,16 +137,16 @@ h1 {
 }
 
 .btn.again:hover {
-  box-shadow: 0 5px 15px rgba(233, 112, 241, 0.938);
+  box-shadow: 0 5px 15px rgba(233, 112, 241, 0.94);
 }
 
 .btn.instruc {
   background-color: rgb(255, 248, 119);
-  box-shadow: 0 5px 15px rgba(255, 248, 119, 0.521);
+  box-shadow: 0 5px 15px rgba(255, 248, 119, 0.45);
 }
 
 .btn.instruc:hover {
-  box-shadow: 0 5px 15px rgba(255, 248, 119, 0.863);
+  box-shadow: 0 5px 15px rgba(255, 248, 119, 0.94);
 }
 
 .message {
@@ -176,12 +179,12 @@ h1 {
 }
 
 .winner {
-  background-color: #6cf15a;
+  background-color: #5aff44;
   color: rgb(36, 36, 36);
 }
 
 .loser {
-  background-color: #ff3131;
+  background-color: #fd4b4b;
   color: rgb(36, 36, 36);
 }
 
