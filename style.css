@@ -133,17 +133,17 @@ h1 {
 }
 
 .btn.again {
-  background-color: rgb(236, 141, 243);
-  box-shadow: 0 5px 15px rgba(233, 112, 241, 0.459);
+  background-color: rgb(240, 106, 211);
+  box-shadow: 0 5px 15px rgba(240, 106, 211, 0.459);
 }
 
 .btn.again:hover {
-  box-shadow: 0 5px 15px rgba(233, 112, 241, 0.94);
+  box-shadow: 0 5px 15px rgba(235, 110, 231, 0.94);
 }
 
 .btn.instruc {
-  background-color: rgb(255, 248, 119);
-  box-shadow: 0 5px 15px rgba(255, 248, 119, 0.45);
+  background-color: rgb(243, 224, 115);
+  box-shadow: 0 5px 15px rgba(243, 224, 115, 0.45);
 }
 
 .btn.instruc:hover {
