@@ -17,6 +17,8 @@ let highScore = 0;
 
 let guess = 0;
 
+let lastGuess = 0;
+
 let score = 0;
 
 //Modal and overlay objects
@@ -58,7 +60,10 @@ const handleClickCheck = function () {
       if (guess < secretNum)
         displayMessage("📉 Too low! Enter again."); //Number too low
       else displayMessage("📈 Too high! Enter again."); //Number too high
-      gleft--;
+      if (guess !== lastGuess) {
+        gleft--;
+      }
+      lastGuess = guess;
       score = calcScore(gleft);
       document.querySelector(".guess-left").textContent = gleft;
       document.querySelector(".score").textContent = score;
@@ -66,16 +71,18 @@ const handleClickCheck = function () {
       //Game Over
     }
   } else {
-    gleft = 0;
-    score = calcScore(gleft);
-    document.querySelector(".score").textContent = score;
-    document.querySelector(".guess-left").textContent = gleft;
-    document.querySelector(".number").textContent = secretNum;
-    document.querySelector(".number").style.width = "25rem";
-    displayMessage("👊🔴 GAME OVER! 🔴👊");
-    document.querySelector("head").classList.add("loser");
-    document.querySelector("main").classList.add("loser");
-    document.getElementById("guessField").disabled = true;
+    if (guess !== lastGuess) {
+      gleft = 0;
+      score = calcScore(gleft);
+      document.querySelector(".score").textContent = score;
+      document.querySelector(".guess-left").textContent = gleft;
+      document.querySelector(".number").textContent = secretNum;
+      document.querySelector(".number").style.width = "25rem";
+      displayMessage("👊🔴 GAME OVER! 🔴👊");
+      document.querySelector("head").classList.add("loser");
+      document.querySelector("main").classList.add("loser");
+      document.getElementById("guessField").disabled = true;
+    }
   }
 };
 

@@ -124,8 +124,8 @@ h1 {
 
 .btn.check {
   color: rgb(20, 20, 20);
-  background-color: rgb(151, 153, 231);
-  box-shadow: 0 5px 15px rgba(146, 148, 236, 0.45);
+  background-color: rgb(123, 157, 231);
+  box-shadow: 0 5px 15px rgba(123, 157, 231, 0.45);
 }
 
 .btn.check:hover {
